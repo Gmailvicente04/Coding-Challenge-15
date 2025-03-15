@@ -27,3 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+ // 4. Function to add risk items dynamically
+ function addRiskItem(riskName, riskLevel, department) {
+    const riskCard = document.createElement("div");
+    riskCard.classList.add("riskCard");
+    updateRiskCardColor(riskCard, riskLevel);
+    
+    riskCard.innerHTML = `
+        <strong>${riskName}</strong>
+        <p class="riskLevel">${riskLevel}</p>
+        <p>Department: ${department}</p>
+        <button class="resolveBtn">Resolve</button>
+    `;
+ }
+
+ 
