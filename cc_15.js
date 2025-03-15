@@ -9,3 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
 } );
 
 
+// 2. Handle form submission to add risk items
+riskForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const riskName = document.getElementById("riskName").value;
+    const riskLevel = document.getElementById("riskLevel").value;
+    const department = document.getElementById("department").value;
+    addRiskItem(riskName, riskLevel, department);
+    riskForm.reset();
+});
