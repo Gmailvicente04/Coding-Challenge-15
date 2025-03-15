@@ -65,3 +65,6 @@ addRiskItem("Data Breach", "High", "IT");
     addRiskItem("Cybersecurity Threat", "High", "IT");
     addRiskItem("HR Compliance Issue", "Low", "Human Resources");
     addRiskItem("Employee Retention", "Low", "HR");
+    addRiskItem("Regulatory Changes", "Medium", "Legal");
+    addRiskItem("Natural Disaster", "High", "Operations");
+    addRiskItem("Imposed Tariffs", "High", "Free Trade");
