@@ -40,6 +40,20 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>Department: ${department}</p>
         <button class="resolveBtn">Resolve</button>
     `;
- }
+    // 5. Prevent event propagation inside risk cards
+    riskCard.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+    
+    // 6. Handle risk item removal
+    riskCard.querySelector(".resolveBtn").addEventListener("click", function () {
+        riskCard.remove();
+    });
+    
+    riskDashboard.appendChild(riskCard);
+}
 
- 
+    // 7. Function to update risk card colors based on risk level
+    function updateRiskCardColor(card, riskLevel) {
+        card.style.backgroundColor = riskLevel === "High" ? "red" : riskLevel === "Medium" ? "yellow" : "green";
+}
